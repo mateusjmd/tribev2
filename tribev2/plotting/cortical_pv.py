@@ -161,6 +161,7 @@ class PlotBrainPyvista(BasePlotBrain):
                 img = pl.screenshot(tmp.name, return_img=True)
             img = tight_crop(img, w_pad=self.w_pad, h_pad=self.h_pad)
             pl.clear()
+            pl.close()
             ax.axis("off")
             ax.imshow(img, aspect="equal")
 
